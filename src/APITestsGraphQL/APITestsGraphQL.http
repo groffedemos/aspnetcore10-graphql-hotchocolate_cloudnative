@@ -1,0 +1,24 @@
+@APITestsGraphQL_HostAddress = http://localhost:5214
+
+GET {{APITestsGraphQL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{APITestsGraphQL_HostAddress}}/graphql
+Content-Type: application/json
+
+{
+  "query": "query { technologies { name description } }"
+}
+
+###
+
+POST {{APITestsGraphQL_HostAddress}}/graphql
+Content-Type: application/json
+
+{
+  "query": "query { technology(name: \"Kubernetes\") { name description } }"
+}
+
+###

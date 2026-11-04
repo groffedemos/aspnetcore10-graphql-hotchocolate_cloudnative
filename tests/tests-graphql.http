@@ -1,0 +1,29 @@
+@host = http://localhost:5214
+
+### Listar todas as tecnologias
+POST {{host}}/graphql/api/cloudnative
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+query {
+  technologies {
+    name
+    description
+  }
+}
+
+### Buscar uma tecnologia pelo nome, usando variáveis
+POST {{host}}/graphql/api/cloudnative
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+query ($name: String!) {
+  technology(name: $name) {
+    name
+    description
+  }
+}
+
+{
+  "name": "Kubernetes"
+}
