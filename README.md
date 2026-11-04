@@ -15,3 +15,6 @@ Consultando todas as tecnologias via interface **Nitro**:
 
 ![Nitro Consulta 1](img/nitro-01.png)
 
+Um segundo teste via **Nitro** consultando agora uma tecnologia específica (**Kubernetes**):
+
+![Nitro Consulta 2](img/nitro-02.png)
